@@ -14,6 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     box-shadow: 5px;
+    background-color: #1F1D36;
 }
 
 .resultCont{
@@ -23,6 +24,17 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+
+}
+.display{
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+
+
 }
 
 .cont{
@@ -38,6 +50,8 @@ body{
 .eql{
     width: 75%;
     font-size: 1.5rem;
+    background-color: #3F3351;
+    color: white;
 }
 
 .btn{
@@ -46,6 +60,8 @@ body{
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
+    color: white;
+    background-color: #3F3351;
 
 }
 .btn1{
@@ -53,7 +69,7 @@ body{
     height: 100%;
     border: none;
     font-size: 1.5rem;
-
+    background-color: #3F3351;
 }
 
 
@@ -69,5 +85,7 @@ body{
 .clear{
     width: 100%;
     font-size: 1.5rem;
+    background-color: #3F3351;
+    color: white;
 }
 

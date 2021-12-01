@@ -18,7 +18,7 @@ let oldEqua = [];
 let lastEnter 
 
 let getButtonsValue = (e) => { 
-    if(!isNaN(e.target.value)){
+    if(!isNaN(e.target.value) || e.target.value == '.'){
         oper =  oper + e.target.value
         display.innerHTML = oper ;
         lastEnter = e.target.value
@@ -53,7 +53,7 @@ let primaryCal = () =>{
     switch (opr[1]){
         case("+"):
         x = opr[3]
-        rslt = parseInt(opr[0]) + parseInt(opr[2])
+        rslt = parseFloat(opr[0]) + parseFloat(opr[2])
         console.log(rslt)
         opr = []
         opr.push(rslt, x)
@@ -62,7 +62,7 @@ let primaryCal = () =>{
 
         case("-"):
         x = opr[3]
-        hstr = parseInt(opr[0]) - parseInt(opr[2])
+        hstr = parseFloat(opr[0]) - parseFloat(opr[2])
         console.log(hstr)
         opr = []
         opr.push(hstr, x)
@@ -71,16 +71,7 @@ let primaryCal = () =>{
 
         case("*"):
         x = opr[3]
-        hstr = parseInt(opr[0]) * parseInt(opr[2])
-        console.log(hstr)
-        opr = []
-        opr.push(hstr, x)
-        console.log(opr)
-        break;
-
-        case("/"):
-        x = opr[3]
-        hstr = parseInt(opr[0]) / parseInt(opr[2])
+        hstr = parseFloat(opr[0]) * parseFloat(opr[2])
         console.log(hstr)
         opr = []
         opr.push(hstr, x)
@@ -95,7 +86,7 @@ let primaryCal = () =>{
 let principalCalc = ()=>{
     switch (opr[1]) {
         case "+":
-            hstr = parseInt(opr[0]) + parseInt([oper])
+            hstr = parseFloat(opr[0]) + parseFloat([oper])
             console.log(hstr)
             display.innerHTML = '0'
             oldEqua.push(oper)
@@ -108,7 +99,7 @@ let principalCalc = ()=>{
             break;
 
         case "-":
-            hstr = parseInt(opr[0]) - parseInt([oper])
+            hstr = parseFloat(opr[0]) - parseFloat([oper])
             console.log(hstr)
             display.innerHTML = '0'
             oldEqua.push(oper)
@@ -120,7 +111,7 @@ let principalCalc = ()=>{
             break;
 
         case "*":
-            hstr = parseInt(opr[0]) * parseInt([oper])
+            hstr = parseFloat(opr[0]) * parseFloat([oper])
             console.log(hstr)
             display.innerHTML = '0'
             oldEqua.push(oper)
@@ -130,16 +121,7 @@ let principalCalc = ()=>{
             result.innerHTML = hstr
             break;
 
-        case "/":
-            hstr = parseInt(opr[0]) / parseInt([oper])
-            console.log(hstr)
-            display.innerHTML = '0'
-            oldEqua.push(oper)
-            opr.push(hstr)
-            oper = ''
-            equation.innerHTML = oldEqua.join('')
-            result.innerHTML = hstr
-            break;
+
 
         default:
             alert("something wrong");
